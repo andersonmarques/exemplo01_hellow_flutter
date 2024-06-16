@@ -1,3 +1,4 @@
+import 'package:exemplo01_hellow_flutter/src/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
@@ -16,43 +17,3 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Barra de título'),
-        centerTitle: true,
-        backgroundColor: const Color.fromARGB(255, 88, 182, 230),
-      ),
-      body: Container(
-        //cor de fundo: azul aline blue
-        color: const Color.fromARGB(240, 248, 255, 255),
-        child: const Center(
-          child: Text(
-            'Conteúdo do app',
-            style: TextStyle(
-              fontSize: 30,
-              color: Colors.blue,
-              fontWeight: FontWeight.bold,
-              fontStyle: FontStyle.italic,
-              decoration: TextDecoration.underline,
-              decorationColor: Colors.red,
-              decorationStyle: TextDecorationStyle.dotted,
-            ),
-          ),
-        ),
-      ),
-      //drawer: menu lateral esquerdo
-      drawer: Container(
-        color: const Color.fromARGB(255, 2, 38, 92),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: const Icon(Icons.add),
-      ),
-    );
-  }
-}
