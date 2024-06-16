@@ -50,10 +50,29 @@ class HomePage extends StatelessWidget {
     return Container(
       //cor de fundo: azul aline blue
       color: const Color.fromARGB(240, 248, 255, 255),
-      child: SizedBox.expand(
-        child: _imgLabtec(),
+      child: Center(
+        child: _button(),
       ),
     );
+  }
+
+  _button() {
+    return ElevatedButton(
+        onPressed: () => _onClickMensage2User("Olá, mundo !!!"),
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all<Color>(
+            Color.fromARGB(255, 93, 230, 88),
+          ),
+        ),
+        child: const Text('Clique aqui',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 40,
+            )));
+  }
+
+  void _onClickMensage2User(String msg) {
+    print(msg);
   }
 
   _text() {
