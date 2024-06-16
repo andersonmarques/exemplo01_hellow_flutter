@@ -8,10 +8,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.blue),
+      debugShowCheckedModeBanner: true,
+      theme: ThemeData(primaryColor: Colors.blue),
       // O scaffold permite utilizar outros widgets do material design
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }
@@ -30,6 +30,20 @@ class HomePage extends StatelessWidget {
       body: Container(
         //cor de fundo: azul aline blue
         color: const Color.fromARGB(240, 248, 255, 255),
+        child: const Center(
+          child: Text(
+            'Conteúdo do app',
+            style: TextStyle(
+              fontSize: 30,
+              color: Colors.blue,
+              fontWeight: FontWeight.bold,
+              fontStyle: FontStyle.italic,
+              decoration: TextDecoration.underline,
+              decorationColor: Colors.red,
+              decorationStyle: TextDecorationStyle.dotted,
+            ),
+          ),
+        ),
       ),
       //drawer: menu lateral esquerdo
       drawer: Container(
