@@ -50,8 +50,8 @@ class HomePage extends StatelessWidget {
     return Container(
       //cor de fundo: azul aline blue
       color: const Color.fromARGB(240, 248, 255, 255),
-      child: Center(
-        child: _text(),
+      child: SizedBox.expand(
+        child: _imgLabtec(),
       ),
     );
   }
@@ -68,6 +68,22 @@ class HomePage extends StatelessWidget {
         decorationColor: Colors.green,
         decorationStyle: TextDecorationStyle.wavy,
       ),
+    );
+  }
+
+  _imgUfra() {
+    return Image.network(
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Logo_Ufra.png/1200px-Logo_Ufra.png',
+      width: 150,
+    );
+  }
+
+  _imgLabtec() {
+    return Image.asset(
+      'assets/images/flutter_logo.png',
+      width: 150,
+      height: 150,
+      fit: BoxFit.contain,
     );
   }
 }
